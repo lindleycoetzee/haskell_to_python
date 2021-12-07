@@ -8,4 +8,4 @@ The way I am attempt to write this handbook will be as follows:
 * Learn to code in haskell
 * Have haskell code with “translated” python code
 
-For ease of reference I will name my chapters the same as “Learn You a Haskell for Great Good!”'s chapters.
+For ease of reference I will name my chapters the same as “Learn You a Haskell for Great Good!”'s chapters. This book not meant the leach off of “Learn You a Haskell for Great Good!” but to be an open, free guide for anyone who is looking to make the transition from python to haskell. I hope this handbook can achieve that. 
