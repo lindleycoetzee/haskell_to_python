@@ -1,0 +1,29 @@
+In this handbook, I will attempt to convert Haskell code to python. I have been coding part time with python for over 3 years now and I am looking to take Haskell. The main reason is to develop dapps on the Cardano blockchain.  
+The way I am attempt to write this handbook will be as follows:
+•	Read “Learn You a Haskell for Great Good!” by Miran Lipovaca
+•	Learn to code in haskell
+•	Have haskell code with “translated” python code
+
+Here we go.
+
+Basic arithmetic
+
+haskell
+ghci> 12 + 10
+22
+ghci> 2 * 17
+34
+ghci> 1441 – 41
+1400
+ghci> 10 / 8
+1.25
+
+python
+>>> 12 + 10
+22
+>>> 2 * 17
+34
+>>> 1441 – 41
+1400
+>>> 10 / 8
+1.25
