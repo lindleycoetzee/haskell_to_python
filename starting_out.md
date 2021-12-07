@@ -51,15 +51,15 @@ With haskell you need to wrap the negative numbers in parenthesis(round brackets
     False 
     
     ##python code
-    ghci> True & False  
+    >>> True & False  
     False  
-    ghci> True & True  
+    >>> True & True  
     True  
-    ghci> False | True  
+    >>> False | True  
     True   
-    ghci> not False  
+    >>> not False  
     True  
-    ghci> not (True & True)  
+    >>> not (True & True)  
     False
   
  **Testing for equality**
@@ -81,15 +81,37 @@ In haskell we use **/=**(not equal to) while in python we use **!=**.
     False 
     
     ##python code
-    ghci> 5 == 5  
+    >>> 5 == 5  
     True  
-    ghci> 1 == 0  
+    >>> 1 == 0  
     False  
-    ghci> 5 != 5  
+    >>> 5 != 5  
     False  
-    ghci> 5 != 4  
+    >>> 5 != 4  
     True  
-    ghci> "hello" == "hello"  
+    >>> "hello" == "hello"  
     True  
-    ghci> "hello" != "hello"  
+    >>> "hello" != "hello"  
     False 
+
+**Functions**
+
+In haskell you separate the function and the parameter with a space. In python you wrap the parameter in parenthesis and the parameters are seperated by commas. Also not that these functions in python can take lots of parameters while they are limited to 2 in haskell. 
+
+    --haskell code
+    ghci> min 9 10  
+    9  
+    ghci> min 3.4 3.2  
+    3.2  
+    ghci> max 100 101  
+    101  
+    
+    ##python code
+    >>> min(9, 10) 
+    9  
+    >>> min (3.4, 3.2, 1.5)
+    1.5
+    >>> max (100, 101, 102, 103)  
+    103
+
+**User defined functions**
