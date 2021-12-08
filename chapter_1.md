@@ -1,4 +1,4 @@
-# Starting out
+# Chapter 1 - The basics
 
 **Basic arithmetic**
 
