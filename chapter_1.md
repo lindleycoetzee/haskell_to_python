@@ -71,3 +71,12 @@ In haskell you separate the function and the parameter with a space. In python y
 | 101  | 103  |
 
 **User defined functions**
+
+In haskell, the way you define a fucntion is as follows. First type the function name, then a space, then the parameter. In python you define a function by first typing "def", then a space, then the function name, then the parameters inside parenthesis ending with a colon(**:**). On the lines below the function you need explain what the function does. The lines below need to be indented. If I did a horibble job of explaining this, hopefully the below code snippets will give you a better idea.
+
+| haskell  | python |
+| --- | --- |
+| ```addTen x = x + 10  ```   | <code>def addTen(x):</code> <br /> <code> &emsp; x = x + 10</code> <br /> <code> &emsp; print(x)</code> |
+
+You can type the above haskell code in your favourite text editor(I'm using Notepad++) and save it as first.hs. Now navigate to the where you have saved your file and **ghci** from there. Once you are inside **GHCi**, type ```:l first```. Once you do that your script will be loaded and now we can try it out. 
+
