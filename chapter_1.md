@@ -76,7 +76,34 @@ In haskell, the way you define a fucntion is as follows. First type the function
 
 | haskell  | python |
 | --- | --- |
-| ```addTen x = x + 10  ```   | <code>def addTen(x):</code> <br /> <code> &emsp; x = x + 10</code> <br /> <code> &emsp; print(x)</code> |
+| ```addTen x = x + 10  ```   | <code>def addTen(x):</code> <br /> <code> &emsp; x = x + 10</code> <br /> <code> &emsp; return x</code> |
 
 You can type the above haskell code in your favourite text editor(I'm using Notepad++) and save it as first.hs. Now navigate to the where you have saved your file and **ghci** from there. Once you are inside **GHCi**, type ```:l first```. Once you do that your script will be loaded and now we can try it out. 
 
+    ghci> addTen 9 
+    19 
+    ghci> addTen 10 + addTen 30
+    60
+
+For python you can save the file as first.py and run it in any IDE. I am using PyCharm so I will run the code from the file. 
+
+    # Input
+    def addTen(x):
+    x = x + 10
+    return x
+    
+    print(addTen(9))
+    print(addTen(10) + addTen(30))
+    
+    # Output
+    C:\first.py
+    19
+    60
+
+    Process finished with exit code 0
+    
+We can write another function that includes our first function. 
+
+| haskell  | python |
+| --- | --- |
+| ```addTentimesTwo x = addTen x * 2  ```   | <code>def addTentimesTwo(x):</code> <br /> <code> &emsp; y = addTen(x) * 2</code> <br /> <code> &emsp; return y</code> |
