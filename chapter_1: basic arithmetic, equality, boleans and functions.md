@@ -102,4 +102,13 @@ The above function takes a number, adds 10, then multiplies it with 2. So in bas
 | ```addTentimesTwo 25 + addTentimesTwo 10 ```| ```>>> addTentimesTwo(25) + addTentimesTwo(10)``` |
 | 110  | 110  |
 
-In both Haskell
+The functions in both Hasell and Python do not have to be in a particular order. Order does not matter because we are just defining two functions. 
+
+**If statements**
+
+Regarding if statements, the main difference between Haskell and Python is that the "**else**" is necessary in Haskell while it is optional in Python. Lets write a function that squares a number equal to or below 10 and returns the same number is more than 10. 
+
+| Haskell  | Python |
+| --- | --- |
+| <code>sqaureNumber x = if x > 10</code> <br /> <code>    &emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp; then x</code> <br /> <code>    &emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp; else x^2</code> | <code>>>> def squareNumber(x):</code> <br /> <code>... &emsp; if x < 10:</code> <br /> <code>... &emsp; &emsp;&emsp; &emsp;x = x ** 2</code> <br /> <code>... &emsp;  else:</code> <br /> <code>... &emsp; &emsp;&emsp; &emsp;x </code> <br /> <code>... &emsp;  return x </code> |
+
