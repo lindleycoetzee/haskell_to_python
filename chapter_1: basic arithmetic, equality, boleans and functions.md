@@ -3,7 +3,7 @@
 **Basic arithmetic**
 
 
-| haskell  | python |
+| Haskell  | Python |
 | --- | --- |
 | ```ghci> 12 + 10```   | ```>>> 12 + 10``` |
 | 22  | 22  |
@@ -14,18 +14,18 @@
 | ```ghci> 10 / 8```   | ```>>> 10 / 8``` |
 | 1.25  | 1.25  |
 
-With haskell you need to wrap the negative numbers in parenthesis(round brackets) otherwise you will get an error.
+With Haskell you need to wrap the negative numbers in parenthesis(round brackets) otherwise you will get an error.
 
-| haskell  | python |
+| Haskell  | Python |
 | --- | --- |
 | ```ghci> 18 * (-10)```   | ```>>> 18 * -10``` |
 | -180  | -180  |
     
   **Bolean expressions**
   
- In haskell we use **&&**(and) and **||**(or) while in python we use **&** and **|**.
+ In Haskell we use **&&**(and) and **||**(or) while in Python we use **&** and **|**.
  
-| haskell  | python |
+| Haskell  | Python |
 | --- | --- |
 | ```ghci> True && False ```   | ```>>> True & False ``` |
 | False  | False  |
@@ -40,9 +40,9 @@ With haskell you need to wrap the negative numbers in parenthesis(round brackets
     
  **Testing for equality**
  
-In haskell we use **/=**(not equal to) while in python we use **!=**.
+In Haskell we use **/=**(not equal to) while in Python we use **!=**.
 
-| haskell  | python |
+| Haskell  | Python |
 | --- | --- |
 | ```ghci> 5 == 5  ```   | ```>>> 5 == 5  ``` |
 | True  | True  |
@@ -59,9 +59,9 @@ In haskell we use **/=**(not equal to) while in python we use **!=**.
 
 **Functions**
 
-In haskell you separate the function and the parameter with a space. In python you wrap the parameter in parenthesis and the parameters are seperated by commas. Also note that these functions in python can take lots of parameters while they are limited to 2 in haskell. 
+In Haskell you separate the function and the parameter with a space. In Python you wrap the parameter in parenthesis and the parameters are seperated by commas. Also note that these functions in Python can take lots of parameters while they are limited to 2 in Haskell. 
 
-| haskell  | python |
+| Haskell  | Python |
 | --- | --- |
 | ```ghci> min 9 10   ```   | ```>>> min(9, 10)  ``` |
 | 9  | 9  |
@@ -72,16 +72,16 @@ In haskell you separate the function and the parameter with a space. In python y
 
 **User defined functions**
 
-In haskell, the way you define a fucntion is as follows. First type the function name, then a space, then the parameter. In python you define a function by first typing "def", then a space, then the function name, then the parameters inside parenthesis ending with a colon(**:**). On the lines below the function you need explain what the function does. The lines below need to be indented. If I did a horibble job of explaining this, hopefully the below code snippets will give you a better idea.
+In Haskell, the way you define a fucntion is as follows. First type the function name, then a space, then the parameter. In Python you define a function by first typing "def", then a space, then the function name, then the parameters inside parenthesis ending with a colon(**:**). On the lines below the function you need explain what the function does. The lines below need to be indented. If I did a horibble job of explaining this, hopefully the below code snippets will give you a better idea.
 
-| haskell  | python |
+| Haskell  | Python |
 | --- | --- |
 | ```addTen x = x + 10  ```   | <code> >>> def addTen(x):</code> <br /> <code>... &emsp; x = x + 10</code> <br /> <code>... &emsp; return x</code> |
 
-You can type the above haskell code in your favourite text editor(I'm using Notepad++) and save it as first.hs. Now navigate to the where you have saved your file and **ghci** from there. Once you are inside **GHCi**, type ```:l first```. Once you do that your script will be loaded and now we can try it out. 
-For python you can save the file as first.py and run it in any IDE(Integrated Development Environment). Or you can run continue to run these scripts in the command prompt. 
+You can type the above Haskell code in your favourite text editor(I'm using Notepad++) and save it as first.hs. Now navigate to the where you have saved your file and **ghci** from there. Once you are inside **GHCi**, type ```:l first```. Once you do that your script will be loaded and now we can try it out. 
+For Python you can save the file as first.py and run it in any IDE(Integrated Development Environment). Or you can run continue to run these scripts in the command prompt. 
 
-| haskell  | python |
+| Haskell  | Python |
 | --- | --- |
 | ```addTen 9 ```| ```>>> addTen(9)``` |
 | 19  | 19  |
@@ -90,14 +90,16 @@ For python you can save the file as first.py and run it in any IDE(Integrated De
     
 We can write another function that includes our first function. 
 
-| haskell  | python |
+| Haskell  | Python |
 | --- | --- |
 | ```addTentimesTwo x = addTen x * 2  ```   | <code>>>> def addTentimesTwo(x):</code> <br /> <code>... &emsp; y = addTen(x) * 2</code> <br /> <code>... &emsp; return y</code> |
 
 The above function takes a number, adds 10, then multiplies it with 2. So in basic algebra is would be **(x + 10) * 2**. We can run the code and see the results.
-| haskell  | python |
+| Haskell  | Python |
 | --- | --- |
 | ```addTentimesTwo 25 ```| ```>>> addTentimesTwo(25)``` |
 | 70  | 70  |
 | ```addTentimesTwo 25 + addTentimesTwo 10 ```| ```>>> addTentimesTwo(25) + addTentimesTwo(10)``` |
 | 110  | 110  |
+
+In both Haskell
