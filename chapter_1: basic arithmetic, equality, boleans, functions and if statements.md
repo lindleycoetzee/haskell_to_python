@@ -1,6 +1,6 @@
 # Chapter 1 - The basics
 
-**Basic arithmetic**
+### **Basic arithmetic**
 
 
 | Haskell  | Python |
@@ -21,7 +21,7 @@ With Haskell you need to wrap the negative numbers in parenthesis(round brackets
 | ```ghci> 18 * (-10)```   | ```>>> 18 * -10``` |
 | -180  | -180  |
     
-  **Bolean expressions**
+### **Bolean expressions**
   
  In Haskell we use **&&**(and) and **||**(or) while in Python we use **&** and **|**.
  
@@ -38,7 +38,7 @@ With Haskell you need to wrap the negative numbers in parenthesis(round brackets
 | ```ghci> not (True && True)```   | ```>>> not (True & True)   ``` |
 | True  | True  |
     
- **Testing for equality**
+### **Testing for equality**
  
 In Haskell we use **/=**(not equal to) while in Python we use **!=**.
 
@@ -57,7 +57,7 @@ In Haskell we use **/=**(not equal to) while in Python we use **!=**.
 | ```ghci> "hello" /= "hello" ```   | ```>>> "hello" != "hello"   ``` |
 | True  | True  |
 
-**Functions**
+### **Functions**
 
 In Haskell you separate the function and the parameter with a space. In Python you wrap the parameter in parenthesis and the parameters are seperated by commas. Also note that these functions in Python can take lots of parameters while they are limited to 2 in Haskell. 
 
@@ -70,7 +70,7 @@ In Haskell you separate the function and the parameter with a space. In Python y
 | ```ghci> max 100 101 ```   | ```>>> max(100, 101, 102, 103)``` |
 | 101  | 103  |
 
-**User defined functions**
+### **User defined functions**
 
 In Haskell, the way you define a fucntion is as follows. First type the function name, then a space, then the parameter. In Python you define a function by first typing "def", then a space, then the function name, then the parameters inside parenthesis ending with a colon(**:**). On the lines below the function you need explain what the function does. The lines below need to be indented. If I did a horibble job of explaining this, hopefully the below code snippets will give you a better idea.
 
@@ -104,7 +104,7 @@ The above function takes a number, adds 10, then multiplies it with 2. So in bas
 
 The functions in both Hasell and Python do not have to be in a particular order. Order does not matter because we are just defining two functions. 
 
-**If statements**
+### **If statements**
 
 Regarding if statements, the main difference between Haskell and Python is that the "**else**" is necessary in Haskell while it is optional in Python. Lets write a function that squares a number equal to or below 10 and returns the same number is more than 10. 
 
