@@ -76,30 +76,30 @@ In Haskell, the way you define a fucntion is as follows. First type the function
 
 | Haskell  | Python |
 | --- | --- |
-| ```addTen x = x + 10  ```   | <code> >>> def addTen(x):</code> <br /> <code>... &emsp; x = x + 10</code> <br /> <code>... &emsp; return x</code> |
+| ```addTen x = x + 10  ```   | <code> def addTen(x):</code> <br /> <code>&emsp; x = x + 10</code> <br /> <code>&emsp; return x</code> |
 
 You can type the above Haskell code in your favourite text editor(I'm using Notepad++) and save it as first.hs. Now navigate to the where you have saved your file and **ghci** from there. Once you are inside **GHCi**, type ```:l first```. Once you do that your script will be loaded and now we can try it out. 
-For Python you can save the file as first.py and run it in any IDE(Integrated Development Environment). Or you can run continue to run these scripts in the command prompt. 
+For Python you can save the file as first.py and run it in any IDE or text editor. 
 
 | Haskell  | Python |
 | --- | --- |
-| ```addTen 9 ```| ```>>> addTen(9)``` |
+| ```addTen 9 ```| ```print(addTen(9))``` |
 | 19  | 19  |
-| ```addTen 10 + addTen 30 ```| ```>>> addTen(10) + addTen(30)``` |
+| ```addTen 10 + addTen 30 ```| ```print(addTen(10) + addTen(30))``` |
 | 60  | 60  |
     
 We can write another function that includes our first function. 
 
 | Haskell  | Python |
 | --- | --- |
-| ```addTentimesTwo x = addTen x * 2  ```   | <code>>>> def addTentimesTwo(x):</code> <br /> <code>... &emsp; y = addTen(x) * 2</code> <br /> <code>... &emsp; return y</code> |
+| ```addTentimesTwo x = addTen x * 2  ```   | <code>def addTentimesTwo(x):</code> <br /> <code>&emsp; y = addTen(x) * 2</code> <br /> <code>&emsp; return y</code> |
 
 The above function takes a number, adds 10, then multiplies it with 2. So in basic algebra is would be **(x + 10) * 2**. We can run the code and see the results.
 | Haskell  | Python |
 | --- | --- |
-| ```addTentimesTwo 25 ```| ```>>> addTentimesTwo(25)``` |
+| ```addTentimesTwo 25 ```| ```print(addTentimesTwo(25))``` |
 | 70  | 70  |
-| ```addTentimesTwo 25 + addTentimesTwo 10 ```| ```>>> addTentimesTwo(25) + addTentimesTwo(10)``` |
+| ```addTentimesTwo 25 + addTentimesTwo 10 ```| ```print(addTentimesTwo(25) + addTentimesTwo(10))``` |
 | 110  | 110  |
 
 The functions in both Hasell and Python do not have to be in a particular order. Order does not matter because we are just defining two functions. 
@@ -110,5 +110,5 @@ Regarding if statements, the main difference between Haskell and Python is that 
 
 | Haskell  | Python |
 | --- | --- |
-| <code>sqaureNumber x = if x > 10</code> <br /> <code>    &emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp; then x</code> <br /> <code>    &emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp; else x^2</code> | <code>>>> def squareNumber(x):</code> <br /> <code>... &emsp; if x < 10:</code> <br /> <code>... &emsp; &emsp;&emsp; &emsp;x = x ** 2</code> <br /> <code>... &emsp;  else:</code> <br /> <code>... &emsp; &emsp;&emsp; &emsp;x </code> <br /> <code>... &emsp;  return x </code> |
+| <code>sqaureNumber x = if x > 10</code> <br /> <code>    &emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp; then x</code> <br /> <code>    &emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp; else x^2</code> | <code>def squareNumber(x):</code> <br /> <code> &emsp; if x < 10:</code> <br /> <code> &emsp; &emsp;&emsp; &emsp;x = x ** 2</code> <br /> <code> &emsp;  else:</code> <br /> <code> &emsp; &emsp;&emsp; &emsp;x </code> <br /> <code> &emsp;  return x </code> |
 
