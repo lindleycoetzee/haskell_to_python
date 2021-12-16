@@ -1,4 +1,4 @@
-# Chapter 1 - The basics
+# Chapter 1 - Basic arithmetic, equality, boleans, functions and if statements
 
 ### **Basic arithmetic**
 
