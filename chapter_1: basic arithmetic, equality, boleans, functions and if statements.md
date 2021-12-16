@@ -23,7 +23,7 @@ With Haskell you need to wrap the negative numbers in parenthesis (round bracket
     
 ### **Boolean expressions**
   
- In Haskell we use **&&**(and) and **||**(or) while in Python we use **&** and **|**.
+ In Haskell we use ```&&```(and) and ```||```(or) while in Python we use ```&``` and ```|```.
  
 | Haskell  | Python |
 | --- | --- |
@@ -40,7 +40,7 @@ With Haskell you need to wrap the negative numbers in parenthesis (round bracket
     
 ### **Testing for equality**
  
-In Haskell we use **/=** (not equal to) while in Python we use **! =**.
+In Haskell we use ```/=``` (not equal to) while in Python we use ```!=```.
 
 | Haskell  | Python |
 | --- | --- |
