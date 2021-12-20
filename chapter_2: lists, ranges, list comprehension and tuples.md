@@ -34,6 +34,55 @@ By using the ```++``` in Haskel and ```+``` in Python, we are appending .i.e we 
 | ['hi', 'how', 'are', 'you']| ```>>> textList``` |
 | | ['hi', 'how', 'are', 'you'] |
 
+Please note that by using ```insert``` in Python you fundamentally change the list. Haskell the original list is still intact. 
+If you want to get an element out of a list by index you use ```!!``` in Haskell. In Python you would pass the index number in square brackets after the list. 
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> "Haskell" !! 0```   | ```>>> "Haskell"[0]``` |
+| 'H' |'H' |
+| ```ghci> [1,2,3,4,5,6,7,8,9] !! 3```   | ```>>>  [1,2,3,4,6,7,8,9][3]``` |
+| 4 | 4 |
+
+Lists can also contain lists making it a list of lists. Below we create a list of lists and apply some of the functions we just learned. 
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> z = [[1,2,3],[4,5,6],[7,8,9]]```   | ```>>> numberList2 = [5,6,7,8]``` |
+| ```ghci> z```   | ```>>> z``` |
+| [[1,2,3],[4,5,6],[7,8,9]] | [[1,2,3],[4,5,6],[7,8,9]] |
+| ```ghci> z !! 0```   | ```>>> z[0]``` |
+| [1,2,3] | [1,2,3]]] |
+| ```ghci> z ++ [[0,0,0]]```   | ```>>> z + [[0,0,0]]``` |
+| [[1,2,3],[4,5,6],[7,8,9],[0,0,0]] | [[1,2,3],[4,5,6],[7,8,9],[0,0,0]] |
+| ```ghci> [9,9,9]:z```   | ```>>> z.insert(0,[[9,9,9]])``` |
+|  | ```>>> z ``` |
+| [[9,9,9],[1,2,3],[4,5,6],[7,8,9]] | [[9,9,9],[1,2,3],[4,5,6],[7,8,9]] |
+
+Lists are compared in lexicographical order, which more or less saying alphabetical order. 
+
+| Numerical order  | Lexicographical order |
+| --- | --- |
+| 1,2,15,18   | 1,15,18,2 |
+
+Let us do some comparisons on lists. 
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> [1,2,3] < [4,5,6]```   | ```>>> [1,2,3] < [4,5,6]``` |
+| True |True |
+| ```ghci> [5,7,3] > [4,5,6]```   | ```>>> [5,7,3] > [4,5,6]``` |
+| True |True |
+| ```ghci> [15,20] < [10,15,6]```   | ```>>> [15,20] < [10,15,6]``` |
+| False |False |
+| ```ghci> [5,3] == [5,3]```   | ```>>> [5,3] == [5,3]``` |
+| True |True |
+| ```ghci> [5,3] /= [5,3]```   | ```>>> [5,3] != [5,3]``` |
+| False |False |
+
+Now let us try out some basic list functions
+
+
 ### **Ranges**
 
 
