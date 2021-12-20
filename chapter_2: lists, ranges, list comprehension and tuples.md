@@ -80,7 +80,44 @@ Let us do some comparisons on lists.
 | ```ghci> [5,3] /= [5,3]```   | ```>>> [5,3] != [5,3]``` |
 | False |False |
 
-Now let us try out some basic list functions
+Now let us try out some basic list functions. Most of the below functions for Haskell are built-in. For almost all of them we will use [slicers](https://www.geeksforgeeks.org/python-list-slicing/) in Python. See the below table showing the functions and with their descriptions. The data used for the below workings will be as follows : ```myList = [1,2,3,4,5,6,7,8,9]``` and ``` emptyList = [] ```
+
+| Haskell  | Python | Description |
+| ---------- | ---------- | --- |
+| ```ghci> head myList```   | ```>>> myList[0]``` | Returns the first element of a list |
+| 1 |1 | |
+| ```ghci> tail myList```   | ```>>> myList[1:] ``` | Returns all the elements of a list except the head |
+| [2,3,4,5,6,7,8,9] |[2,3,4,5,6,7,8,9] | |
+| ```ghci> last myList```   | ```>>> myList[-1]``` | Returns the last element of a list |
+| 9 |9 | |
+| ```ghci> init myList```   | ```>>> myList[:-1]``` | Returns all the elements of a list except the last element |
+| [1,2,3,4,5,6,7,8] |[1,2,3,4,5,6,7,8] | |
+| ```ghci> length myList ```   | ```>>> len(myList) ``` | Returns the number of elements in a list |
+| 9 |9 | |
+| ```ghci> null myList ```   | ```>>> myList != None ``` | Returns ``` True ``` is list is empty and ```False``` if list is not empty |
+| False |False | |
+| ```ghci> null emptyList ```   | ```>>> emptyList != None ``` | Returns ``` True ``` if list is empty and ```False``` if list is not empty |
+| True |True | |
+| ```ghci> reverse myList```   | ```>>> myList.reverse()``` | Returns all the elements of a list except the last element |
+|    | ```>>> myList``` | In Python the original list gets updated to a reversed list |
+| [9,8,7,6,5,4,3,2,1]| [9,8,7,6,5,4,3,2,1]| |
+| ```ghci> take 5 myList```   | ```>>> myList[:5]``` | Returns the indicated number of elements of a list, starting from the beginning. |
+| [1,2,3,4,5] | [1,2,3,4,5] | |
+| ```ghci> drop 5 myList```   | ```>>> myList[5:]``` | Drops the indicated number of elements of a list, starting from the beginning, and returns the remaining elements |
+| [6,7,8,9]] | [6,7,8,9] | |
+| ```ghci> minimum myList```   | ```>>> min(myList)``` | Returns the smallest element in a list |
+| 1 | 1 | |
+| ```ghci> maximum myList```   | ```>>> max(myList)``` | Returns the largest element in a list |
+| 9 | 9 | |
+| ```ghci> sum myList```   | ```>>> sum(myList)``` | Returns the largest element in a list |
+| 45 | 45 | |
+| ```ghci> product myList```   | ```>>> import math``` | Returns the product of all the elements in a list |
+|    | ```>>> math.prod(myList)``` | We need to import math to use the ```prod``` function |
+| 362880 | 362880 | |
+| ```ghci> 6 `elem` myList ```   | ```>>> 6 in myList ``` | Returns ``` True ``` if the element in the list and ```False``` if the element is not in the list|
+| True |True | |
+| ```ghci> 10 `elem` myList ```   | ```>>> 10 in myList ``` | Returns ``` True ``` if the element in the list and ```False``` if the element is not in the list|
+| False |False | |
 
 
 ### **Ranges**
