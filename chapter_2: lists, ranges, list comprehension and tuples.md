@@ -122,13 +122,32 @@ Now let us try out some basic list functions. Most of the below functions for Ha
 
 ### **Ranges**
 
-Ranges are like lists that are sequentially enumerated. Enumerate means to count off or to name one by one. In Haskell you can make ranges of integers and letters but in Python ranges are limited to interegers only. In Haskell we specify a range by using ``` .. ``` in the middle our list. In Python we will use the built-in ``` range() ``` function with the unpacking operator ``` * ```.
+Ranges are like lists that are sequentially enumerated. Enumerate means to count off or to name one by one. In Haskell you can make ranges of integers and letters but in Python ranges are limited to interegers only. In Haskell we specify a range by using ``` .. ``` in the middle our list. In Python we will use the built-in ``` range() ``` function with the [unpacking operator](https://www.python4networkengineers.com/posts/python-intermediate/unpacking_in_python/) ``` * ```.
 
 | Haskell  | Python |
 | --- | --- |
 | ```ghci> [1..9]```   | ```>>> [*range(1,10)]``` |
 | [1,2,3,4,5,6,7,8,9] |[1,2,3,4,5,6,7,8,9] |
+| ```ghci> ['a'..'k']```   | ```>>> [*range('a','k')]``` |
+| "abcdefghijk" |TypeError: 'str' object cannot be interpreted as an integer|
 
+You can also step between ranges
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> [5,10..50]```   | ```>>> [*range(5,51,5)]``` |
+| [5,10,15,20,25,30,35,40,45,50] |[5,10,15,20,25,30,35,40,45,50] |
+| ```ghci> [1,7..25]```   | ```>>> [*range(1,26,6)]``` |
+| [1,7,13,19,25] |[1,7,13,19,25]|
+
+We can use the ``` replicate ``` function in Haskell if you can to have a list containing the same element.
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> replicate 13 5```   | ```>>> [5] * 13``` |
+| [5,5,5,5,5,5,5,5,5,5,5,5,5] |[5,5,5,5,5,5,5,5,5,5,5,5,5]|
+| ```ghci> replicate 4 "haskell"```   | ```>>> ["haskell"] * 4``` |
+| ["haskell","haskell","haskell","haskell"] |["haskell","haskell","haskell","haskell"]|
 
 
 ### **List comprehension**
