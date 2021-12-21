@@ -122,6 +122,14 @@ Now let us try out some basic list functions. Most of the below functions for Ha
 
 ### **Ranges**
 
+Ranges are like lists that are sequentially enumerated. Enumerate means to count off or to name one by one. In Haskell you can make ranges of integers and letters but in Python ranges are limited to interegers only. In Haskell we specify a range by using ``` .. ``` in the middle our list. In Python we will use the built-in ``` range() ``` function with the unpacking operator ``` * ```.
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> [1..9]```   | ```>>> [*range(1,10)]``` |
+| [1,2,3,4,5,6,7,8,9] |[1,2,3,4,5,6,7,8,9] |
+
+
 
 ### **List comprehension**
 
