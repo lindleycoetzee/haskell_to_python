@@ -82,7 +82,7 @@ Let us do some comparisons on lists.
 
 Now let us try out some basic list functions. Most of the below functions for Haskell are built-in. For almost all of them we will use [slicers](https://www.geeksforgeeks.org/python-list-slicing/) in Python. See the below table showing the functions and with their descriptions. The data used for the below workings will be as follows : ```myList = [1,2,3,4,5,6,7,8,9]``` and ``` emptyList = [] ```
 
-| Haskell  | Python | Description |
+| Haskell &emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Python &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Description |
 | ---------- | ---------- | --- |
 | ```ghci> head myList```   | ```>>> myList[0]``` | Returns the first element of a list |
 | 1 |1 | |
@@ -111,8 +111,8 @@ Now let us try out some basic list functions. Most of the below functions for Ha
 | 9 | 9 | |
 | ```ghci> sum myList```   | ```>>> sum(myList)``` | Returns the largest element in a list |
 | 45 | 45 | |
-| ```ghci> product myList```   | ```>>> import math``` | Returns the product of all the elements in a list |
-|    | ```>>> math.prod(myList)``` | We need to import math to use the ```prod``` function |
+|   | ```>>> import math``` | In Python we need to import math to use the ```prod``` function |
+|  ```ghci> product myList```   | ```>>> math.prod(myList)``` | Returns the product of all the elements in a list |
 | 362880 | 362880 | |
 | ```ghci> 6 `elem` myList ```   | ```>>> 6 in myList ``` | Returns ``` True ``` if the element in the list and ```False``` if the element is not in the list|
 | True |True | |
