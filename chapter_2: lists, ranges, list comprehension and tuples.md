@@ -200,10 +200,18 @@ So x1(10) + y1(100) = 110, x1(10) + y2(200) = 210 and x1(10) + y3(300) = 310. We
 
 We can again add a condition.
 
-
 | Haskell  | Python |
 | --- | --- |
 | <code>ghci> [x * y &#124; x <- [3,6,9], y <- [10,20,30], x * y > 150 ]</code>   | ```>>> [x * y for x in [3,6,9] for y in [10,20,30] if x * y > 150]``` |
 | [180,180,270]|[180,180,270]|
+
+Finally, lets create a nested list comprehension on a list of lists
+
+| Haskell  | Python |
+| --- | --- |
+| <code>ghci> let xyz = [[1,2,3],[4,5,6],[7,8,9]]</code>   | ```>>> xyz = [[1,2,3],[4,5,6],[7,8,9]]``` |
+| <code>ghci> [[x &#124; x <- xy, even x ] &#124; xy <- xyz]</code>   | ```>>> [[y for y in x if y % 2 == 0] for x in xyz]``` |
+| [[2],[4,6],[8]]|[[2],[4,6],[8]]|
+  
 
 ### **Tuples**
