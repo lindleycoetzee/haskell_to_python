@@ -212,6 +212,49 @@ Finally, lets create a nested list comprehension on a list of lists
 | <code>ghci> let xyz = [[1,2,3],[4,5,6],[7,8,9]]</code>   | ```>>> xyz = [[1,2,3],[4,5,6],[7,8,9]]``` |
 | <code>ghci> [[x &#124; x <- xy, even x ] &#124; xy <- xyz]</code>   | ```>>> [[y for y in x if y % 2 == 0] for x in xyz]``` |
 | [[2],[4,6],[8]]|[[2],[4,6],[8]]|
-  
 
 ### **Tuples**
+ 
+Tuples a similar to lists. In Haskell and Python, tuples contain a mix of data types. For both Haskell and Python tuples are surrounded by round brackets and data types are separated by commas. The main difference between lists and tuples are that tuples are immutable which means tuples dont change. You cannnot append elements to a tuple. So that means tuples are fixed in size so use them when you know how many elements you need. 
+
+| Haskell | Python | Description |
+| ---------- | ---------- | --- |
+| ```ghci> (1,2)```   | ```>>> (1,2)``` | A tuple of 2 elements is called a _pair_  |
+| (1,2) |(1,2) | |
+| ```ghci> ("i", "love", "coding")```   | ```>>> ("i", "love", "coding") ``` | A tuple of 3 elements is called a _triple_ |
+| ("i", "love", "coding") |("i", "love", "coding") | |
+| ```ghci> ("i", 8, "fish")```   | ```>>> ("i", 8)``` | Pairs and triples are treated as different data types  |
+| ("i", 8) |("i", 8, "fish") | |
+  
+Lets look at some common functions for pairs in Haskell. The below functions will only work on pairs. They will not work for triples, 4-tuples etc.
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> fst ("i",8)```   | ```>>> ("i",8)[0]``` |
+| "i" |"i" |
+| ```ghci> snd (1,2)```   | ```>>> (1,2)[1]``` |
+| 2|2|
+
+The ```zip``` function produces a pair of lists by joining the matching elements according to their position.
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> zip [1,2,3] ["a","b","c"]```   | ```>>> list(zip([1,2,3],["a","b","c"]))``` |
+| [(1,"a"),(2,"b"),(3,"c")] |[(1,"a"),(2,"b"),(3,"c")] |
+| ```ghci> zip [4,8..16] ["we", "times", "by", "four"]```   | ```>>> list(zip(range(4,17,4),["we", "times", "by", "four"]))``` |
+| [(4,"we"),(8,"times"),(12,"by"),(16,"four")]|[(4,"we"),(8,"times"),(12,"by"),(16,"four")]|
+
+Pairs can contain different data types. ```zip``` takes elements of different data types and works on lists with different lenghts. 
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> zip [1,2,3,4,5] ["cricket", "soccer", "rugby"]```   | ```>>> list(zip([1,2,3,4,5],["cricket", "soccer", "rugby"]))``` |
+| [(1,"cricket"),(2,"soccer"),(3,"rugby")] |[(1,"cricket"),(2,"soccer"),(3,"rugby")] |
+
+Since the shorted list only contains 3 elements the result is a 3 element list. We can also zip a finite list with an infinite list. For this to work in Python, we would need to import itertools.
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> ```   | ```>>> import itertools``` |
+| ```ghci> zip [3,6..] ["grape", "apple", "orange", "pear"]```   | ```>>> list(zip(itertools.count(start=3,step=3),["grape", "apple", "orange", "pear"]))``` |
+| [(3,"grape"),(6,"apple"),(9,"orange"),(12,"pear")] | [(3,"grape"),(6,"apple"),(9,"orange"),(12,"pear")] |
