@@ -278,13 +278,13 @@ Armed with that knowledge we can now write our function. We will use a common pr
 | Haskell | Python | Description |
 | ---------- | ---------- | --- |
 ```ghci> ```   | ```>>> from itertools import product``` | Importing needed function in Python |
-| <code>ghci> let triangle = [(a,b,c) &#124; c <- [1..10], a <- [1..10], b<- [1..10]]</code>   | ```>>> triangle = [x for x in product(range(1,N + 1), repeat = 3)]``` | First, we will get all possible triples(triangles) that are equal to or less than 10. |
+| <code>ghci> let triangle = [(a,b,c) &#124; c <- [1..10], a <- [1..10], b<- [1..10]]</code>   | ```>>> triangle = [x for x in product(range(1,N + 1), repeat = 3)]``` | First, we will get all possible triples (triangles) that are equal to or less than 10. |
 | ```ghci> length triangle```   | ```>>> len(triangle)``` | We will only print the length of the list since it contains 1,000 elements. |
 | 1000 |1000 | |
-| <code> ghci> let rightTriangles = [(a,b,c) &#124; c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 ==c^2]</code>    | ```>>> rightTriangles = [x for x in product(range(1,N + 1), repeat = 3) if x[2] <= 10 and x[1] < x[2] and x[0] < x[1] and x[0]**2 + x[1]**2 == x[2]**2] ``` | Second, we add a predecate to only show right triangles. Note that _a_ may not be bigger than _c_ and b needs to be smaller that _a_ because _a_ and _b_ are the smaller sides.|
+| <code> ghci> let rightTriangles = [(a,b,c) &#124; c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 ==c^2]</code>    | ```>>> rightTriangles = [x for x in product(range(1,N + 1), repeat = 3) if x[2] <= 10 and x[1] < x[2] and x[0] < x[1] and x[0]**2 + x[1]**2 == x[2]**2] ``` | Second, we add a predicate to only show right triangles. Note that _a_ may not be bigger than _c_ and b needs to be smaller that _a_ because _a_ and _b_ are the smaller sides.|
 | ```ghci> rightTriangles```   | ```>>> (1,2)``` | |
 | [(4,3,5),(8,6,10)]|[(3,4,5),(6,8,10)] |Now we have narrowed our solutions to only 2.  |
-| <code> ghci> let rightTriangles = [ (a,b,c) &#124; c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 == c^2, a+b+c == 24]</code>    | ```>>> rightTriangles = [x for x in product(range(1,N + 1), repeat = 3) if x[2] <= 10 and x[1] < x[2] and x[0] < x[1] and x[0]**2 + x[1]**2 == x[2]**2 and x[0] + x[1] + x[2] == 24]``` | Lastly, we ensure that all the lengths of the trianle add up to 24.  |
+| <code> ghci> let rightTriangles = [ (a,b,c) &#124; c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 == c^2, a+b+c == 24]</code>    | ```>>> rightTriangles = [x for x in product(range(1,N + 1), repeat = 3) if x[2] <= 10 and x[1] < x[2] and x[0] < x[1] and x[0]**2 + x[1]**2 == x[2]**2 and x[0] + x[1] + x[2] == 24]``` | Lastly, we ensure that all the lengths of the triangle add up to 24.  |
 | ```ghci> rightTriangles```   | ```>>> rightTriangles``` | |
 | [(8,6,10)] |[(6,8,10)] | |
  
