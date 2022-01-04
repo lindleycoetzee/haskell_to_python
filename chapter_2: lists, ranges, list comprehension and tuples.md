@@ -1,6 +1,6 @@
-# Chapter_2: Lists, ranges, list comprehension and tuples
+# Chapter_2: Lists, Ranges, List Comprehension and Tuples
 
-_Most of the functions in this chapter can be written on one line but are cut off or written on multiple lines for readability._
+_Most of the functions in this chapter can be written across one line but are cut off or written across multiple lines for readability._
 
 ### **Lists**
 Lists have a general structure in Haskell. This means that a list can contain strings or integers but not both. This is not the case in Python. In Python, you can have list that that contain a mix of data types. Python lists can also contain other lists. For both Haskell and Python lists are surrounded by square brackets and data types in the list are separated by commas.
@@ -29,12 +29,12 @@ By using the ```++``` in Haskell and ```+``` in Python, we are appending .i.e. w
 
 | Haskell  | Python |
 | --- | --- |
-| ```ghci> 77: numberList```   | ```>>> numberList.insert(0,77)``` |
-| [77,1,2,3,4] | ```>>> numberList``` |
-| | [77, 1, 2, 3, 4] |
-| ```ghci> "hi" : textList```   | ```>>> textList.insert(0,"hi")``` |
-| ['hi', 'how', 'are', 'you']| ```>>> textList``` |
-| | ['hi', 'how', 'are', 'you'] |
+|    | ```>>> numberList.insert(0,77)``` |
+| ```ghci> 77: numberList``` | ```>>> numberList``` |
+| [77,1,2,3,4]| [77, 1, 2, 3, 4] |
+|    | ```>>> textList.insert(0,"hi")``` |
+| ```ghci> "hi" : textList``` | ```>>> textList``` |
+| ['hi', 'how', 'are', 'you'] | ['hi', 'how', 'are', 'you'] |
 
 Please note that by using ```insert``` in Python you fundamentally change the list. Haskell the original list is still intact. 
 If you want to get an element out of a list by index you use ```!!``` in Haskell. In Python, you would pass the index number in square brackets after the list. 
@@ -50,15 +50,15 @@ Lists can also contain lists making it a list of lists. Below we create a list o
 
 | Haskell  | Python |
 | --- | --- |
-| ```ghci> z = [[1,2,3],[4,5,6],[7,8,9]]```   | ```>>> numberList2 = [5,6,7,8]``` |
+| ```ghci> z = [[1,2,3],[4,5,6],[7,8,9]]```   | ```>>> z = [[1,2,3],[4,5,6],[7,8,9]]``` |
 | ```ghci> z```   | ```>>> z``` |
 | [[1,2,3],[4,5,6],[7,8,9]] | [[1,2,3],[4,5,6],[7,8,9]] |
 | ```ghci> z !! 0```   | ```>>> z[0]``` |
 | [1,2,3] | [1,2,3]]] |
 | ```ghci> z ++ [[0,0,0]]```   | ```>>> z + [[0,0,0]]``` |
 | [[1,2,3],[4,5,6],[7,8,9],[0,0,0]] | [[1,2,3],[4,5,6],[7,8,9],[0,0,0]] |
-| ```ghci> [9,9,9]:z```   | ```>>> z.insert(0,[[9,9,9]])``` |
-|  | ```>>> z ``` |
+|   | ```>>> z.insert(0,[[9,9,9]])``` |
+| ```ghci> [9,9,9]:z```  | ```>>> z ``` |
 | [[9,9,9],[1,2,3],[4,5,6],[7,8,9]] | [[9,9,9],[1,2,3],[4,5,6],[7,8,9]] |
 
 Lists are compared in lexicographical order, which more or less saying alphabetical order. 
@@ -82,43 +82,43 @@ Let us do some comparisons on lists.
 | ```ghci> [5,3] /= [5,3]```   | ```>>> [5,3] != [5,3]``` |
 | False |False |
 
-Now let us try out some basic list functions. Most of the below functions for Haskell are built-in. For almost all of them we will use [slicers](https://www.geeksforgeeks.org/python-list-slicing/) in Python. See the below table showing the functions and with their descriptions. The data used for the below workings will be as follows : ```myList = [1,2,3,4,5,6,7,8,9]``` and ``` emptyList = [] ```
+Now let us try out some basic list functions. Most of the below functions for Haskell are built-in. For almost all of them we will use [slicers](https://www.geeksforgeeks.org/python-list-slicing/) in Python. See the below table showing the functions and with their descriptions. The data used for the below workings will be as follows : ```myList = [1,2,3,4,5,6,7,8,9]``` and ``` emptyList = [] ```.
 
 | Haskell &emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Python &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Description |
 | ---------- | ---------- | --- |
-| ```ghci> head myList```   | ```>>> myList[0]``` | Returns the first element of a list |
+| ```ghci> head myList```   | ```>>> myList[0]``` | Returns the first element of a list. |
 | 1 |1 | |
-| ```ghci> tail myList```   | ```>>> myList[1:] ``` | Returns all the elements of a list except the head |
+| ```ghci> tail myList```   | ```>>> myList[1:] ``` | Returns all the elements of a list except the head. |
 | [2,3,4,5,6,7,8,9] |[2,3,4,5,6,7,8,9] | |
-| ```ghci> last myList```   | ```>>> myList[-1]``` | Returns the last element of a list |
+| ```ghci> last myList```   | ```>>> myList[-1]``` | Returns the last element of a list. |
 | 9 |9 | |
-| ```ghci> init myList```   | ```>>> myList[:-1]``` | Returns all the elements of a list except the last element |
+| ```ghci> init myList```   | ```>>> myList[:-1]``` | Returns all the elements of a list except the last element. |
 | [1,2,3,4,5,6,7,8] |[1,2,3,4,5,6,7,8] | |
-| ```ghci> length myList ```   | ```>>> len(myList) ``` | Returns the number of elements in a list |
+| ```ghci> length myList ```   | ```>>> len(myList) ``` | Returns the number of elements in a list. |
 | 9 |9 | |
-| ```ghci> null myList ```   | ```>>> myList != None ``` | Returns ``` True ``` is list is empty and ```False``` if list is not empty |
+| ```ghci> null myList ```   | ```>>> myList != None ``` | Returns ``` True ``` is list is empty and ```False``` if list is not empty. |
 | False |False | |
-| ```ghci> null emptyList ```   | ```>>> emptyList != None ``` | Returns ``` True ``` if list is empty and ```False``` if list is not empty |
+| ```ghci> null emptyList ```   | ```>>> emptyList != None ``` | Returns ``` True ``` if list is empty and ```False``` if list is not empty. |
 | True |True | |
-| ```ghci> reverse myList```   | ```>>> myList.reverse()``` | Returns all the elements of a list except the last element |
-|    | ```>>> myList``` | In Python the original list gets updated to a reversed list |
-| [9,8,7,6,5,4,3,2,1]| [9,8,7,6,5,4,3,2,1]| |
+| ```ghci> reverse myList```  | ```>>> myList.reverse()``` | Reverses the order of a list. |
+|   | ```>>> myList``` |  |
+| [9,8,7,6,5,4,3,2,1]| [9,8,7,6,5,4,3,2,1]| In Python the original list gets updated to a reversed list. |
 | ```ghci> take 5 myList```   | ```>>> myList[:5]``` | Returns the indicated number of elements of a list, starting from the beginning. |
 | [1,2,3,4,5] | [1,2,3,4,5] | |
-| ```ghci> drop 5 myList```   | ```>>> myList[5:]``` | Drops the indicated number of elements of a list, starting from the beginning, and returns the remaining elements |
+| ```ghci> drop 5 myList```   | ```>>> myList[5:]``` | Drops the indicated number of elements of a list, starting from the beginning, and returns the remaining. elements |
 | [6,7,8,9]] | [6,7,8,9] | |
-| ```ghci> minimum myList```   | ```>>> min(myList)``` | Returns the smallest element in a list |
+| ```ghci> minimum myList```   | ```>>> min(myList)``` | Returns the smallest element in a list. |
 | 1 | 1 | |
-| ```ghci> maximum myList```   | ```>>> max(myList)``` | Returns the largest element in a list |
+| ```ghci> maximum myList```   | ```>>> max(myList)``` | Returns the largest element in a list. |
 | 9 | 9 | |
-| ```ghci> sum myList```   | ```>>> sum(myList)``` | Returns the largest element in a list |
+| ```ghci> sum myList```   | ```>>> sum(myList)``` | Returns the sum of all the elements in a list. |
 | 45 | 45 | |
-|   | ```>>> import math``` | In Python we need to import math to use the ```prod``` function |
-|  ```ghci> product myList```   | ```>>> math.prod(myList)``` | Returns the product of all the elements in a list |
+|   | ```>>> import math``` | In Python we need to import math to use the ```prod``` function. |
+|  ```ghci> product myList```   | ```>>> math.prod(myList)``` | Returns the product of all the elements in a list. |
 | 362880 | 362880 | |
-| ```ghci> 6 `elem` myList ```   | ```>>> 6 in myList ``` | Returns ``` True ``` if the element in the list and ```False``` if the element is not in the list|
+| ```ghci> 6 `elem` myList ```   | ```>>> 6 in myList ``` | Returns ``` True ``` if the element in the list and ```False``` if the element is not in the list.|
 | True |True | |
-| ```ghci> 10 `elem` myList ```   | ```>>> 10 in myList ``` | Returns ``` True ``` if the element in the list and ```False``` if the element is not in the list|
+| ```ghci> 10 `elem` myList ```   | ```>>> 10 in myList ``` | Returns ``` True ``` if the element in the list and ```False``` if the element is not in the list.|
 | False |False | |
 
 
@@ -154,7 +154,7 @@ We can use the ``` replicate ``` function in Haskell if you can to have a list c
 
 ### **List comprehension**
 
-A list comprehension is a way of creating a list from an existing list and is written in one line. Let’s create two list comprehensions. The first one adds five to a list and the second one multiplies each number in the list by 3.
+A list comprehension is a way of creating a list from an existing list and is written across one line. Let’s create two list comprehensions. The first one adds five to a list and the second one multiplies each number in the list by 3.
 
 | Haskell  | Python |
 | --- | --- |
@@ -172,7 +172,7 @@ Now let’s add a condition or a predicate to our list comprehension. The predic
 | <code>ghci> [x * 3 &#124; x <-[1..5], x * 3 >= 10]</code>   | ```>>> [x * 3 for x in range(1,6) if x * 3 >= 10]``` |
 | [12,15] |[12,15]|
 
-Next, let us get all the numbers between 40 and 80 that is remainder when divided by 8 is 5. 
+Next, let us get all the numbers between 40 and 80 when the remainder is 5, if divided by 8.
 
 | Haskell  | Python |
 | --- | --- |
@@ -186,7 +186,7 @@ We can also assign multiple predicated to our list comprehensions. Say we wanted
 | <code>ghci> [x &#124; x <-[1..10], x/=1, x/=4, x/=9]</code>   | ```>>> [x for x in range(1,11) if x != 1 and x != 4 and x != 9]``` |
 | [2,3,5,6,7,8,10]|[2,3,5,6,7,8,10]|
 
-We can also draw values from many lists and the result will be on list. We will create a list comprehension where the first number in the first list is added to all the numbers in the second list and will continue for all the numbers in the first list. If that sounds confusing, I hope the code will do a better job at explaining it. 
+We can also draw values from many lists and the result will be a list. We will create a list comprehension where the first number in the first list is added to all the numbers in the second list and will continue for all the numbers in the first list. If that sounds confusing, I hope the code will do a better job at explaining it. 
 
 | Haskell  | Python |
 | --- | --- |
@@ -207,7 +207,7 @@ We can again add a condition.
 | <code>ghci> [x * y &#124; x <- [3,6,9], y <- [10,20,30], x * y > 150 ]</code>   | ```>>> [x * y for x in [3,6,9] for y in [10,20,30] if x * y > 150]``` |
 | [180,180,270]|[180,180,270]|
 
-Finally, lets create a nested list comprehension on a list of lists
+Finally, lets create a nested list comprehension on a list of lists.
 
 | Haskell  | Python |
 | --- | --- |
@@ -217,7 +217,7 @@ Finally, lets create a nested list comprehension on a list of lists
 
 ### **Tuples**
  
-Tuples a similar to lists. In Haskell and Python, tuples contain a mix of data types. For both Haskell and Python tuples are surrounded by round brackets and the data types are separated by commas. The main difference between lists and tuples are that tuples are immutable which means tuples don’t change. You cannot append elements to a tuple. So that means tuples are fixed in size, so use them when you know how many elements you need. 
+Tuples are similar to lists. In Haskell and Python, tuples contain a mix of data types. For both Haskell and Python tuples are surrounded by round brackets and the data types are separated by commas. The main difference between lists and tuples are that tuples are immutable which means tuples don’t change. You cannot append elements to a tuple. So that means tuples are fixed in size, so use them when you know how many elements you need. 
 
 | Haskell | Python | Description |
 | ---------- | ---------- | --- |
@@ -253,7 +253,7 @@ Pairs can contain different data types. ```zip``` takes elements of different da
 | ```ghci> zip [1,2,3,4,5] ["cricket", "soccer", "rugby"]```   | ```>>> list(zip([1,2,3,4,5],["cricket", "soccer", "rugby"]))``` |
 | [(1,"cricket"),(2,"soccer"),(3,"rugby")] |[(1,"cricket"),(2,"soccer"),(3,"rugby")] |
 
-Since the shorted list only contains 3 elements the result is a 3 element list. We can also zip a finite list with an infinite list. For this to work in Python, we would need to import itertools.
+Since the shorted list only contains 3 elements the result is a 3 element list. We can also zip a finite list with an infinite list. For this to work in Python, we would need to import ```itertools``` .
 
 | Haskell  | Python |
 | --- | --- |
@@ -263,28 +263,28 @@ Since the shorted list only contains 3 elements the result is a 3 element list. 
  
 #### **Finding the right triangle**
 
-We will end a problem that combines tuples with list comprehensions. We will create a function to find a right-angled triangle that satisfies the following conditions:
+We will end with a problem that combines tuples with list comprehensions. We will create a function to find a right-angled triangle that satisfies the following conditions:
 * the lengths of all sides are integers(whole numbers);
 * the length of each side is equal to or less than 10; and 
 * the triangles perimeter(sum of all the side lengths) is equal to 24.
 
 Before we start writing our function, we need to know what the properties of a right-angled triangle are. Right-angled triangles or right triangles:
-* has one angle that is equal to 90 degrees;
+* have one angle that is equal to 90 degrees;
 * the longest side of a right triangle is called the _hypotenuse_; and
 * the hypotenuse is equal to the sum of the remaining 2 sides(_Pythagorean theorem (a^2 + b^2 == c^2_).
 
-Armed with that knowledge we can now write our function. We will use a common practice in function programming. We will start with a certain set of solutions and then transform and/or filter them until you have narrowed it down to the solution you are looking for. For Python, we will need to import the ```product``` function from the ```intertools``` library. 
+Armed with that knowledge we can now write our function. We will use a common practice in functional programming. We will start with a certain set of solutions and then transform and/or filter them until you have narrowed it down to the solution you are looking for. For Python, we will need to import the ```product``` function from the ```intertools``` library. 
  
 | Haskell | Python | Description |
 | ---------- | ---------- | --- |
-```ghci> ```   | ```>>> from itertools import product``` | Importing needed function in Python |
-| <code>ghci> let triangle = [(a,b,c) &#124; c <- [1..10], a <- [1..10], b<- [1..10]]</code>   | ```>>> triangle = [x for x in product(range(1,N + 1), repeat = 3)]``` | First, we will get all possible triples (triangles) that are equal to or less than 10. |
+|  | ```>>> from itertools import product``` | Importing needed function in Python. |
+| <code>ghci> let triangle = [(a,b,c) &#124; c <- [1..10], a <- [1..10], b<- [1..10]]</code>   | ```>>> triangle = [x for x in product(range(1,11), repeat = 3)]``` | First, we will get all possible triples (triangles) that are equal to or less than 10. |
 | ```ghci> length triangle```   | ```>>> len(triangle)``` | We will only print the length of the list since it contains 1,000 elements. |
 | 1000 |1000 | |
-| <code> ghci> let rightTriangles = [(a,b,c) &#124; c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 ==c^2]</code>    | ```>>> rightTriangles = [x for x in product(range(1,N + 1), repeat = 3) if x[2] <= 10 and x[1] < x[2] and x[0] < x[1] and x[0]**2 + x[1]**2 == x[2]**2] ``` | Second, we add a predicate to only show right triangles. Note that _a_ may not be bigger than _c_ and b needs to be smaller that _a_ because _a_ and _b_ are the smaller sides.|
-| ```ghci> rightTriangles```   | ```>>> (1,2)``` | |
+| <code> ghci> let rightTriangles = [(a,b,c) &#124; c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 ==c^2]</code>    | ```>>> rightTriangles = [x for x in product(range(1,11), repeat = 3) if x[2] <= 10 and x[1] < x[2] and x[0] < x[1] and x[0]**2 + x[1]**2 == x[2]**2] ``` | Second, we add a predicate to only show right triangles. Note that _a_ may not be bigger than _c_ and b needs to be smaller than _a_ because _a_ and _b_ are the smaller sides.|
+| ```ghci> rightTriangles```   | ```>>> rightTriangles``` | |
 | [(4,3,5),(8,6,10)]|[(3,4,5),(6,8,10)] |Now we have narrowed our solutions to only 2.  |
-| <code> ghci> let rightTriangles = [ (a,b,c) &#124; c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 == c^2, a+b+c == 24]</code>    | ```>>> rightTriangles = [x for x in product(range(1,N + 1), repeat = 3) if x[2] <= 10 and x[1] < x[2] and x[0] < x[1] and x[0]**2 + x[1]**2 == x[2]**2 and x[0] + x[1] + x[2] == 24]``` | Lastly, we ensure that all the lengths of the triangle add up to 24.  |
+| <code> ghci> let rightTriangles = [ (a,b,c) &#124; c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 == c^2, a+b+c == 24]</code>    | ```>>> rightTriangles = [x for x in product(range(1,11), repeat = 3) if x[2] <= 10 and x[1] < x[2] and x[0] < x[1] and x[0]**2 + x[1]**2 == x[2]**2 and x[0] + x[1] + x[2] == 24]``` | Lastly, we ensure that all the lengths of the triangle add up to 24.  |
 | ```ghci> rightTriangles```   | ```>>> rightTriangles``` | |
 | [(8,6,10)] |[(6,8,10)] | |
  
