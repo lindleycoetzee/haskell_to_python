@@ -23,15 +23,25 @@ In Haskell you need to wrap the negative numbers in parenthesis (round brackets)
     
 ### **Boolean expressions**
   
- In Haskell we use ```&&```(and) and ```||```(or) while in Python we use ```&``` and ```|```.
+Boolean values in both Haskell and Python are ```True``` and ```False```. Below is a table showing the Boolean operators for Haskell and Python.
+
+| Operator | Haskell  | Python |
+|---| --- | --- |
+|Conjunction| <code> &#124;&#124;</code>   | ```and``` |
+|Disjunction| <code> &&</code>   | ```or``` |
+|Negate| <code> not</code>   | ```not``` |
+|Equality| <code> ==</code>   | ```==``` |
+|Inequality| <code> /=</code>   | ```!=``` |
+
+Using the above operators, let us look at how to use them.
  
 | Haskell  | Python |
 | --- | --- |
-| ```ghci> True && False ```   | ```>>> True & False ``` |
+| ```ghci> True && False ```   | ```>>> True and False ``` |
 | False  | False  |
-| ```ghci> True && True```   | ```>>> True & True``` |
+| ```ghci> True && True```   | ```>>> True and True``` |
 | True  | True  |
-| <code>ghci> False &#124;&#124; True</code>  | <code>>>> False &#124; True</code> |
+| <code>ghci> False &#124;&#124; True</code>  | <code>>>> False or True</code> |
 | True  | True  |
 | ```ghci> not False```   | ```>>> not False ``` |
 | True  | True  |
