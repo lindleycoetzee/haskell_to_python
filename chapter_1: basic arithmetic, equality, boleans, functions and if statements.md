@@ -1,4 +1,4 @@
-# Chapter 1 - Basic arithmetic, equality, boleans, functions and if statements
+# Chapter 1 - Basic arithmetic, Equality, Booleans, Functions and If Statements
 
 ### **Basic arithmetic**
 
@@ -14,7 +14,7 @@
 | ```ghci> 10 / 8```   | ```>>> 10 / 8``` |
 | 1.25  | 1.25  |
 
-With Haskell you need to wrap the negative numbers in parenthesis (round brackets) otherwise you will get an error.
+In Haskell you need to wrap the negative numbers in parenthesis (round brackets) otherwise you will get an error.
 
 | Haskell  | Python |
 | --- | --- |
@@ -55,7 +55,7 @@ In Haskell we use ```/=``` (not equal to) while in Python we use ```!=```.
 | ```ghci> "hello" == "hello" ```   | ```>>> "hello" == "hello"   ``` |
 | True  | True  |
 | ```ghci> "hello" /= "hello" ```   | ```>>> "hello" != "hello"   ``` |
-| True  | True  |
+| False  | False  |
 
 ### **Functions**
 
@@ -72,13 +72,13 @@ In Haskell you separate the function and the parameter with a space. In Python y
 
 ### **User defined functions**
 
-In Haskell, the way you define a function is as follows. First type the function name, then a space, then the parameter. In Python you define a function by first typing "def", then a space, then the function name, then the parameters inside parenthesis ending with a colon(**:**). On the lines below the function, you need explain what the function does. The lines below need to be indented. If I did a horrible job of explaining this, hopefully the below code snippets will give you a better idea.
+In Haskell, the way you define a function is as follows. First type the function name, then a space, then the parameter. In Python you define a function by first typing ```def```, then a space, then the function name, then the parameters inside parenthesis ending with a ```:```. On the lines below the function, you need explain what the function does. The lines below need to be indented. If I did a horrible job of explaining this, hopefully the below code snippets will give you a better idea.
 
 | Haskell  | Python |
 | --- | --- |
 | ```addTen x = x + 10  ```   | <code> def addTen(x):</code> <br /> <code>&emsp; x = x + 10</code> <br /> <code>&emsp; return x</code> |
 
-You can type the above Haskell code in your favourite text editor (I'm using Notepad++) and save it as first.hs. Now navigate to the where you have saved your file and **ghci** from there. Once you are inside **GHCi**, type ```:l first```. Once you do that your script will be loaded and now we can try it out. 
+You can type the above Haskell code in your favourite text editor (I'm using Notepad++) and save it as first.hs. Now navigate to the where you have saved your file and run **ghci** from there. Once you are inside **GHCi**, type ```:l first```. Once you do that your script will be loaded and now we can try it out. 
 For Python you can save the file as first.py and run it in any IDE or text editor. 
 
 | Haskell  | Python |
