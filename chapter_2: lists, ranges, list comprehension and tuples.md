@@ -1,4 +1,4 @@
-# Chapter_2: Lists, Ranges, List Comprehension and Tuples
+# Chapter 2 - Lists, Ranges, List Comprehension and Tuples
 
 _Most of the functions in this chapter can be written across one line but are cut off or written across multiple lines for readability._
 
