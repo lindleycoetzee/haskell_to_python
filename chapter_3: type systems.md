@@ -34,9 +34,78 @@ In explicit typing systems data is assigned a type while in implicit typing syst
 | ```ghci> :t ('z', False)```   | ```>>> print(str(list(map(type,('z', False)))))``` |
 | ('z', False) :: (Char, Bool)  | [<class 'str'>, <class 'bool'>] |
 
+The ```::``` means _"has the type of"_ for example ```True``` has the type of ```Bool```. 
+
 From the above you will notice in Haskell that:
 * explicit types start with a uppercase letter e.g Char, Bool and Num and
 * each element in a tuple has its own type
 
-In both Haskell and Python, you can label variables with a data type. We will use the function we made in
+In both Haskell and Python, you can give our functions type declarations. The below function will take three elements and add them together. We will specify the type of the elements as integer.
 
+| Haskell  | Python |
+| --- | --- |
+| ```addThree :: Int -> Int -> Int -> Int ; addThree x y z = x + y + z```   | <code>def addThree(x:int, y:int, z:int):</code> <br /> <code> &emsp; answer = x + y + z </code> <br /> <code> &emsp; &emsp;&emsp; &emsp;return int(answer)</code>|
+| ```addThree 10 100 1000```   | ```>>> addThree(10,100,1000)``` |
+| 1110 | 1110|
+| ``` :t addThree```   | ```>>> type(addThree)``` |
+| addThree :: Int -> Int -> Int -> Int | <class 'function'>|
+
+### **Common Types**
+
+| Haskell &emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Python &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Description |
+| ---------- | ---------- | --- |
+| ```Int```   | ```int()``` | Integers(whole numbers) |
+| ```Float```   |  | Floating point with single precision .e.g 14.242526 |
+| ```Double```   | ```float()``` | Floating point with double precision .e.g 3.333333333333335|
+| ```Bool```   | ```bool()``` | Boolean values: ```True``` and ```False``` |
+| ```Char```   | ```str()``` | Unicode character. Denoted in single quotes in Haskell. In Python string can be denoted in both single and double quotes. |
+
+### **Type Classes**
+
+#### **The Eq Type Class**
+
+This is to test for equality. Below are some examples.
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> 75 == 75```   | ```>>> 75 == 75``` |
+| True | True |
+| ```ghci> 75 /= 75```   | ```>>> 75 != 75``` |
+| False | False |
+| ```ghci> "Yes" == "No"```   | ```>>> "Yes" == "No"```|
+| False | False |
+
+#### **The Ord Type Class**
+
+This for types whose values can be put in some order. Lets have a look at some examples.
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> "afwefwwe" > "adwddw"```   | ```>>> "afwefwwe" > "adwddw"``` |
+| True | True |
+| ```ghci> 75 < 5```   | ```>>> 75 < 5``` |
+| False | False |
+
+In Haskell, the ```compare``` function takes 2 values and returns an ```Ordering```. The ```Ordering``` types are ```GT```(greater than), ```LT```(lesser than) and ```EQ```(equal).
+
+| Haskell  |
+| --- | 
+| ```ghci> "afwefwwe" `compare` "adwddw"```   |
+| GT | 
+| ```ghci> 75 `compare` 75```   |
+| EQ | 
+
+#### **The Show Type Class**
+
+In Haskell the ```show``` type class prints the values as a string. In Python, we can wrap ```str()``` around the value.
+
+| Haskell  | Python |
+| --- | --- |
+| ```ghci> show 26```   | ```>>> str(26)``` |
+| "26" | '26' |
+| ```ghci> show False```   | ```>>> str(False)``` |
+| "False" | 'False' |
+
+#### **The Read Type Class**
+
+In Haskell the ```read``` class type can be considered the opposite of the ```show``` class type. 
