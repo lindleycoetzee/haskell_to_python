@@ -47,7 +47,7 @@ In both Haskell and Python, we can give our functions type declarations. The bel
 | ```ghci> addThree :: Int -> Int -> Int -> Int ; addThree x y z = x + y + z```   | <code>def addThree(x:int, y:int, z:int):</code> <br /> <code> &emsp; answer = x + y + z </code> <br /> <code> &emsp; &emsp;&emsp; &emsp;return int(answer)</code>|
 | ```ghci> addThree 10 100 1000```   | ```>>> addThree(10,100,1000)``` |
 | 1110 | 1110|
-| ``` :t addThree```   | ```>>> type(addThree)``` |
+| ``` ghci> :t addThree```   | ```>>> type(addThree)``` |
 | addThree :: Int -> Int -> Int -> Int | <class 'function'>|
 
 ### **Common Types**
