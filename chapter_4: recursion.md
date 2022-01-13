@@ -1,0 +1,1 @@
+Recursion is the process where a fucntion calls itself until it has reached a certain critera or gotten the desired result. This means that the function stops runnning when the condition of that function has been met. 
